@@ -22,9 +22,10 @@ jobs:
       - name: Upload to Artifact Store
       uses: actions/upload-artifact@v3   
       with:  
-       name: my-artifact
+      name: my-artifact
        path: ${{env.DOTNET_ROOT}}/publish
 
+       
   
   
    
