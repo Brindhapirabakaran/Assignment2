@@ -17,3 +17,14 @@ jobs:
         dotnet-version: 7.0.x
     - name: Build
       run: dotnet build
+      - name: Publish
+      run: dotnet publish -o ${{env.DOTNET_ROOT}}/publish
+      - name: Upload to Artifact Store
+      uses: actions/upload-artifact@v3   
+      with:  
+       name: my-artifact
+       path: ${{env.DOTNET_ROOT}}/publish
+
+  
+  
+   
